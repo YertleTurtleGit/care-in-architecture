@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Care in Architecture</title>
+    <style>
+      * {
+        color: blue;
+      }
+
+      #graph {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+
+      #graph-div {
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 20rem;
+        height: 100%;
+        width: calc(80%-20rem);
+      }
+
+      #scroll-content {
+        position: absolute;
+        width: 100%;
+        height: auto;
+      }
+
+      .scroll-element {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        height: 100vh;
+        align-items: left;
+        justify-content: left;
+      }
+
+      .scroll-element p,
+      .scroll-element h1 {
+        text-align: justify;
+        padding: 5px;
+        max-width: 18rem;
+      }
+
+      .scroll-element * {
+        border-radius: 3px;
+        padding: 2px;
+        font-family: serif;
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="graph-div">
+      <object id="graph" data="graph.svg"></object>
+    </div>
+
+    <div id="scroll-content">
+      <div class="scroll-element">
+        <h1>1</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nunc
+          ligula, lobortis eget dictum eget, semper accumsan orci. Integer
+          semper enim ut nisl sodales hendrerit. Nam vel magna porta, efficitur
+          sem vitae, aliquet tellus. Cras scelerisque ex tempor nulla varius
+          ullamcorper. Mauris semper, nulla ac aliquam luctus, ante dolor
+          ullamcorper leo, et tempor sapien orci non risus. Proin tincidunt
+          ligula eget augue volutpat dapibus. Donec ultricies justo nec libero
+          auctor pulvinar. Etiam non posuere nulla. Mauris sit amet nisl id ante
+          maximus facilisis vehicula vestibulum orci. Etiam vitae massa sit amet
+          tellus finibus maximus. Sed sit amet velit aliquam massa malesuada
+          mattis. Fusce maximus, purus a pellentesque placerat, erat nisl
+          commodo erat, vel congue augue nisi sed orci.
+        </p>
+      </div>
+      <div class="scroll-element">
+        <h1>2</h1>
+        <p>
+          In ultrices lorem eget posuere dapibus. Vestibulum accumsan nulla
+          nisi, a sollicitudin est tempus id. Nam vel nulla dapibus, cursus nisl
+          congue, mattis leo. Maecenas sollicitudin luctus sapien sollicitudin
+          ullamcorper. Mauris pulvinar, nunc a suscipit suscipit, libero sem
+          lobortis eros, id euismod leo ex tristique arcu. Nullam pellentesque a
+          metus id mollis. Aliquam erat volutpat. Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit. Sed bibendum, magna ut tincidunt posuere,
+          nulla mauris fringilla turpis, vel gravida nisl dolor sit amet eros.
+          Pellentesque nec consectetur purus. Praesent porttitor ac orci id
+          finibus. Maecenas mollis justo quis congue pulvinar. Nam ac iaculis
+          tortor. Sed a mollis quam, pulvinar congue eros. Nullam lacinia quam
+          nec tincidunt ultrices. Orci varius natoque penatibus et magnis dis
+          parturient montes, nascetur ridiculus mus.
+        </p>
+      </div>
+      <div class="scroll-element">
+        <h1>3</h1>
+        <p>
+          Integer justo mi, egestas a lectus ut, consequat placerat erat. Nunc
+          consequat purus at tortor placerat, vitae vestibulum ex blandit. Cras
+          condimentum ullamcorper dictum. Nunc ornare, velit eu sollicitudin
+          euismod, neque orci porta ipsum, vitae viverra sapien velit ut nisl.
+          Duis vitae posuere massa. Donec tempus nibh ac magna pharetra
+          facilisis. Quisque tincidunt cursus leo, eu semper orci sagittis sed.
+          Vivamus ut blandit ligula. Pellentesque habitant morbi tristique
+          senectus et netus et malesuada fames ac turpis egestas. Donec rutrum
+          sodales ante, id tincidunt leo dignissim id. Pellentesque in sapien
+          eros. Nam nec diam ut nibh vulputate tincidunt.
+        </p>
+      </div>
+      <div class="scroll-element">
+        <h1>4</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nunc
+          ligula, lobortis eget dictum eget, semper accumsan orci. Integer
+          semper enim ut nisl sodales hendrerit. Nam vel magna porta, efficitur
+          sem vitae, aliquet tellus. Cras scelerisque ex tempor nulla varius
+          ullamcorper. Mauris semper, nulla ac aliquam luctus, ante dolor
+          ullamcorper leo, et tempor sapien orci non risus. Proin tincidunt
+          ligula eget augue volutpat dapibus. Donec ultricies justo nec libero
+          auctor pulvinar. Etiam non posuere nulla. Mauris sit amet nisl id ante
+          maximus facilisis vehicula vestibulum orci. Etiam vitae massa sit amet
+          tellus finibus maximus. Sed sit amet velit aliquam massa malesuada
+          mattis. Fusce maximus, purus a pellentesque placerat, erat nisl
+          commodo erat, vel congue augue nisi sed orci.
+        </p>
+      </div>
+      <div class="scroll-element">
+        <h1>5</h1>
+        <p>
+          In ultrices lorem eget posuere dapibus. Vestibulum accumsan nulla
+          nisi, a sollicitudin est tempus id. Nam vel nulla dapibus, cursus nisl
+          congue, mattis leo. Maecenas sollicitudin luctus sapien sollicitudin
+          ullamcorper. Mauris pulvinar, nunc a suscipit suscipit, libero sem
+          lobortis eros, id euismod leo ex tristique arcu. Nullam pellentesque a
+          metus id mollis. Aliquam erat volutpat. Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit. Sed bibendum, magna ut tincidunt posuere,
+          nulla mauris fringilla turpis, vel gravida nisl dolor sit amet eros.
+          Pellentesque nec consectetur purus. Praesent porttitor ac orci id
+          finibus. Maecenas mollis justo quis congue pulvinar. Nam ac iaculis
+          tortor. Sed a mollis quam, pulvinar congue eros. Nullam lacinia quam
+          nec tincidunt ultrices. Orci varius natoque penatibus et magnis dis
+          parturient montes, nascetur ridiculus mus.
+        </p>
+      </div>
+      <div class="scroll-element">
+        <h1>6</h1>
+        <p>
+          Integer justo mi, egestas a lectus ut, consequat placerat erat. Nunc
+          consequat purus at tortor placerat, vitae vestibulum ex blandit. Cras
+          condimentum ullamcorper dictum. Nunc ornare, velit eu sollicitudin
+          euismod, neque orci porta ipsum, vitae viverra sapien velit ut nisl.
+          Duis vitae posuere massa. Donec tempus nibh ac magna pharetra
+          facilisis. Quisque tincidunt cursus leo, eu semper orci sagittis sed.
+          Vivamus ut blandit ligula. Pellentesque habitant morbi tristique
+          senectus et netus et malesuada fames ac turpis egestas. Donec rutrum
+          sodales ante, id tincidunt leo dignissim id. Pellentesque in sapien
+          eros. Nam nec diam ut nibh vulputate tincidunt.
+        </p>
+      </div>
+      <div class="scroll-element">
+        <h1>7</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nunc
+          ligula, lobortis eget dictum eget, semper accumsan orci. Integer
+          semper enim ut nisl sodales hendrerit. Nam vel magna porta, efficitur
+          sem vitae, aliquet tellus. Cras scelerisque ex tempor nulla varius
+          ullamcorper. Mauris semper, nulla ac aliquam luctus, ante dolor
+          ullamcorper leo, et tempor sapien orci non risus. Proin tincidunt
+          ligula eget augue volutpat dapibus. Donec ultricies justo nec libero
+          auctor pulvinar. Etiam non posuere nulla. Mauris sit amet nisl id ante
+          maximus facilisis vehicula vestibulum orci. Etiam vitae massa sit amet
+          tellus finibus maximus. Sed sit amet velit aliquam massa malesuada
+          mattis. Fusce maximus, purus a pellentesque placerat, erat nisl
+          commodo erat, vel congue augue nisi sed orci.
+        </p>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
