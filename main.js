@@ -1,3 +1,7 @@
+console.log("TESTEST");
+console.log(parent.document.getElementById("innerFrame"));
+console.log({ parentDocument: parent.document });
+
 const graphObject = document.getElementById("graph");
 graphObject.style.opacity = 0;
 
