@@ -1,4 +1,5 @@
 const graphObject = document.getElementById("graph");
+graphObject.style.opacity = 0;
 
 const graphProperties = {
   sectionTopicsOpacity: 1,
@@ -11,6 +12,8 @@ const graphProperties = {
 let svgLoaded = false;
 graphObject.addEventListener("load", () => {
   svgLoaded = true;
+  updateInteractiveGraph();
+  graphObject.style.opacity = 1;
 });
 
 function updateInteractiveGraph() {
