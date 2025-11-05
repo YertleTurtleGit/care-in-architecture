@@ -104,6 +104,7 @@ adaptToWindowSize();
 window.addEventListener("resize", adaptToWindowSize);
 
 const stages = [
+  // 1
   {
     callback: () => {
       graphObject.style.transform = "";
@@ -114,6 +115,7 @@ const stages = [
       graphProperties.topicKnotsOpacity = 0.1;
     },
   },
+  // 2
   {
     callback: (scroll) => {
       graphObject.style.transform = "";
@@ -124,6 +126,7 @@ const stages = [
       graphProperties.topicKnotsOpacity = scroll * 5 + 0.1;
     },
   },
+  // 3
   {
     callback: (scroll) => {
       graphObject.style.transform = "";
@@ -134,29 +137,29 @@ const stages = [
       graphProperties.topicKnotsOpacity = Math.max(1 - scroll * 5, 0) + 0.1;
     },
   },
+  // 4
   {
     callback: (scroll) => {
-      graphObject.style.transform =
-        "scale(" + (scroll + 1) + ") translate(" + scroll * 35 + "%, 0%)";
-      graphProperties.connectionsOpacity = 1;
-      graphProperties.projectsOpacity = 0.1;
+      graphObject.style.transform = "";
+      graphProperties.connectionsOpacity = 0.1;
+      graphProperties.projectsOpacity = scroll * 5 + 0.1;
+      graphProperties.sectionTopicsOpacity = 1;
+      graphProperties.sectionsOpacity = 1;
+      graphProperties.topicKnotsOpacity = 0.1;
+    },
+  },
+  // 5
+  {
+    callback: (scroll) => {
+      graphObject.style.transform = "";
+      graphProperties.connectionsOpacity = scroll * 5 + 0.1;
+      graphProperties.projectsOpacity = 1;
       graphProperties.sectionTopicsOpacity = 1;
       graphProperties.sectionsOpacity = 1;
       graphProperties.topicKnotsOpacity = scroll * 5 + 0.1;
     },
   },
-  {
-    callback: (scroll) => {
-      graphObject.style.transform =
-        "scale(2) translate(" + (-scroll * 35 + 35) + "%, 0%)";
-      graphProperties.connectionsOpacity = 1;
-      graphProperties.projectsOpacity = 0.1;
-      graphProperties.sectionTopicsOpacity = 1;
-      graphProperties.sectionsOpacity = 1;
-      graphProperties.topicKnotsOpacity = 1;
-    },
-  },
-  {
+  /*{
     callback: (scroll) => {
       graphObject.style.transform =
         "scale(2) translate(" + -scroll * 35 + "%, 0%)";
@@ -181,7 +184,7 @@ const stages = [
       graphProperties.sectionsOpacity = 1;
       graphProperties.topicKnotsOpacity = Math.max(1 - scroll * 3, 0) + 0.1;
     },
-  },
+  },*/
 ];
 
 function updateScrollEffect() {
