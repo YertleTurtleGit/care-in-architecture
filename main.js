@@ -14,6 +14,44 @@ graphObject.addEventListener("load", () => {
   svgLoaded = true;
   updateInteractiveGraph();
   graphObject.style.opacity = 1;
+
+  const svgDoc = graphObject.contentDocument;
+  const GRAPH_ELEMENTS = {
+    TRANSFORM_ITERATIVE: Array.from(
+      svgDoc.getElementById("Knoten_Themen").querySelectorAll("tspan")
+    ).filter((tspan) =>
+      ["TRANSFORM ", "ITERATIVE"].includes(tspan.textContent)
+    ),
+  };
+
+  const infoBox = document.createElement("div");
+  infoBox.classList.add("info-box");
+  document.body.appendChild(infoBox);
+
+  GRAPH_ELEMENTS.TRANSFORM_ITERATIVE.forEach((element) => {
+    element.addEventListener("mouseenter", () => {
+      infoBox.textContent =
+        "The „…process is given priority over outcome, embracing challenges such as uncertainty and failure, and striving to do things ‘better’ through renewed adjustments and tinkering.“ (Moriggi u. a. 2020, 293)";
+      infoBox.style.opacity = "1";
+
+      GRAPH_ELEMENTS.TRANSFORM_ITERATIVE.forEach((subElement) => {
+        subElement.style.filter =
+          "drop-shadow(0 0 20px yellow) drop-shadow(0 0 20px yellow) drop-shadow(0 0 20px yellow) drop-shadow(0 0 20px yellow)";
+      });
+    });
+
+    element.addEventListener("mousemove", (e) => {
+      infoBox.style.left = e.clientX + 15 + "px";
+      infoBox.style.top = e.clientY + 15 + "px";
+    });
+
+    element.addEventListener("mouseleave", () => {
+      infoBox.style.opacity = "0";
+      GRAPH_ELEMENTS.TRANSFORM_ITERATIVE.forEach((subElement) => {
+        subElement.style.filter = "";
+      });
+    });
+  });
 });
 
 function updateInteractiveGraph() {
